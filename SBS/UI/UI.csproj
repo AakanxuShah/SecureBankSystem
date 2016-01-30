@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48E28162-8DFE-43AB-BE04-9734DD0E6ECE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UI</RootNamespace>
+    <AssemblyName>UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.7.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.7\lib\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AccountStatement.aspx" />
+    <Content Include="AdminHome.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="CreateAccount.aspx" />
+    <Content Include="CreditForm.aspx" />
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\Custom.css" />
+    <Content Include="css\keyboard.css" />
+    <Content Include="CustomerEmployeeDelete.aspx" />
+    <Content Include="CustProfileUpdate.aspx" />
+    <Content Include="DebitForm.aspx" />
+    <Content Include="DeleteCustomer.aspx" />
+    <Content Include="DeleteEmployee.aspx" />
+    <Content Include="EmployeeHome.aspx" />
+    <Content Include="EmployeeCreate.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <None Include="Properties\PublishProfiles\localPublish.pubxml" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Help.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="images\logo.png" />
+    <Content Include="ExternalTransfer.aspx" />
+    <Content Include="MakePayment.aspx" />
+    <Content Include="MerchantHome.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="PII.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom\Master.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery.keyboard.extension-typing.js" />
+    <Content Include="Scripts\jquery.keyboard.js" />
+    <Content Include="Site1.Master" />
+    <Content Include="UserGuide_files\themedata.thmx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InternalTransfer.aspx" />
+    <Content Include="SystemLog.aspx" />
+    <Content Include="UserGuide.html" />
+    <Content Include="UserGuide_files\colorschememapping.xml" />
+    <Content Include="UserGuide_files\filelist.xml" />
+    <Content Include="UserGuide_files\header.htm" />
+    <Content Include="UserGuide_files\image001.png" />
+    <Content Include="UserGuide_files\image002.jpg" />
+    <Content Include="UserGuide_files\image003.gif" />
+    <Content Include="UserGuide_files\image004.jpg" />
+    <Content Include="UserGuide_files\image005.jpg" />
+    <Content Include="UserGuide_files\image006.jpg" />
+    <Content Include="UserGuide_files\image007.jpg" />
+    <Content Include="UserGuide_files\image008.jpg" />
+    <Content Include="UserGuide_files\image009.jpg" />
+    <Content Include="UserGuide_files\image010.jpg" />
+    <Content Include="UserGuide_files\image011.jpg" />
+    <Content Include="UserGuide_files\image012.jpg" />
+    <Content Include="UserGuide_files\image013.jpg" />
+    <Content Include="UserGuide_files\image014.jpg" />
+    <Content Include="UserGuide_files\image015.jpg" />
+    <Content Include="UserGuide_files\image016.jpg" />
+    <Content Include="UserGuide_files\image017.jpg" />
+    <Content Include="UserGuide_files\image018.jpg" />
+    <Content Include="UserGuide_files\image019.jpg" />
+    <Content Include="UserGuide_files\image020.jpg" />
+    <Content Include="UserGuide_files\image021.jpg" />
+    <Content Include="UserGuide_files\image022.jpg" />
+    <Content Include="UserGuide_files\image023.jpg" />
+    <Content Include="UserGuide_files\image024.jpg" />
+    <Content Include="UserGuide_files\image025.jpg" />
+    <Content Include="UserGuide_files\image026.jpg" />
+    <Content Include="UserGuide_files\image027.jpg" />
+    <Content Include="UserGuide_files\image028.jpg" />
+    <Content Include="UserGuide_files\image029.jpg" />
+    <Content Include="UserGuide_files\image030.jpg" />
+    <Content Include="UserGuide_files\image031.jpg" />
+    <Content Include="UserGuide_files\image032.jpg" />
+    <Content Include="UserGuide_files\image033.jpg" />
+    <Content Include="UserGuide_files\image034.jpg" />
+    <Content Include="UserGuide_files\image035.jpg" />
+    <Content Include="UserGuide_files\image036.jpg" />
+    <Content Include="UserGuide_files\image037.jpg" />
+    <Content Include="UserGuide_files\image038.jpg" />
+    <Content Include="UserGuide_files\image039.jpg" />
+    <Content Include="UserGuide_files\image040.png" />
+    <Content Include="UserGuide_files\image041.jpg" />
+    <Content Include="UserGuide_files\image042.jpg" />
+    <Content Include="UserGuide_files\image043.jpg" />
+    <Content Include="UserGuide_files\image044.jpg" />
+    <Content Include="UserGuide_files\image045.jpg" />
+    <Content Include="UserGuide_files\image046.gif" />
+    <Content Include="UserGuide_files\image047.jpg" />
+    <Content Include="UserGuide_files\image048.jpg" />
+    <Content Include="UserGuide_files\image049.jpg" />
+    <Content Include="UserGuide_files\image050.jpg" />
+    <Content Include="UserGuide_files\image051.jpg" />
+    <Content Include="UserGuide_files\image052.jpg" />
+    <Content Include="UserGuide_files\image053.jpg" />
+    <Content Include="UserGuide_files\image054.jpg" />
+    <Content Include="UserGuide_files\image055.jpg" />
+    <Content Include="UserGuide_files\image056.jpg" />
+    <Content Include="UserGuide_files\image057.jpg" />
+    <Content Include="UserGuide_files\image058.jpg" />
+    <Content Include="UserGuide_files\image059.jpg" />
+    <Content Include="UserGuide_files\image060.jpg" />
+    <Content Include="UserGuide_files\image061.jpg" />
+    <Content Include="UserGuide_files\image062.jpg" />
+    <Content Include="UserGuide_files\image063.jpg" />
+    <Content Include="UserGuide_files\image064.gif" />
+    <Content Include="UserGuide_files\item0001.xml" />
+    <Content Include="UserGuide_files\props0002.xml" />
+    <Content Include="UserLogin.aspx" />
+    <Content Include="UserRegistration.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AccountStatement.aspx.cs">
+      <DependentUpon>AccountStatement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccountStatement.aspx.designer.cs">
+      <DependentUpon>AccountStatement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreditForm.aspx.cs">
+      <DependentUpon>CreditForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreditForm.aspx.designer.cs">
+      <DependentUpon>CreditForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerEmployeeDelete.aspx.cs">
+      <DependentUpon>CustomerEmployeeDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerEmployeeDelete.aspx.designer.cs">
+      <DependentUpon>CustomerEmployeeDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CustProfileUpdate.aspx.cs">
+      <DependentUpon>CustProfileUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustProfileUpdate.aspx.designer.cs">
+      <DependentUpon>CustProfileUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DebitForm.aspx.cs">
+      <DependentUpon>DebitForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DebitForm.aspx.designer.cs">
+      <DependentUpon>DebitForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteCustomer.aspx.cs">
+      <DependentUpon>DeleteCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteCustomer.aspx.designer.cs">
+      <DependentUpon>DeleteCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEmployee.aspx.cs">
+      <DependentUpon>DeleteEmployee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteEmployee.aspx.designer.cs">
+      <DependentUpon>DeleteEmployee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeHome.aspx.cs">
+      <DependentUpon>EmployeeHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeHome.aspx.designer.cs">
+      <DependentUpon>EmployeeHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeCreate.aspx.cs">
+      <DependentUpon>EmployeeCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeCreate.aspx.designer.cs">
+      <DependentUpon>EmployeeCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Encryption.cs" />
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Global.cs" />
+    <Compile Include="Help.aspx.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help.aspx.designer.cs">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ExternalTransfer.aspx.cs">
+      <DependentUpon>ExternalTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ExternalTransfer.aspx.designer.cs">
+      <DependentUpon>ExternalTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MakePayment.aspx.cs">
+      <DependentUpon>MakePayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MakePayment.aspx.designer.cs">
+      <DependentUpon>MakePayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MerchantHome.aspx.cs">
+      <DependentUpon>MerchantHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MerchantHome.aspx.designer.cs">
+      <DependentUpon>MerchantHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PII.aspx.cs">
+      <DependentUpon>PII.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PII.aspx.designer.cs">
+      <DependentUpon>PII.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InternalTransfer.aspx.cs">
+      <DependentUpon>InternalTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InternalTransfer.aspx.designer.cs">
+      <DependentUpon>InternalTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SystemLog.aspx.cs">
+      <DependentUpon>SystemLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SystemLog.aspx.designer.cs">
+      <DependentUpon>SystemLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserLogin.aspx.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserLogin.aspx.designer.cs">
+      <DependentUpon>UserLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserRegistration.aspx.designer.cs">
+      <DependentUpon>UserRegistration.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Project>{3f5f1d68-90d0-49ba-bb4d-2faebc6d7c6b}</Project>
+      <Name>Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{cebe7e41-6752-448e-980c-6abfa5a917ec}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mnemonics\Mnemonics.csproj">
+      <Project>{7f750235-d41a-4136-89ee-4bd00d76e801}</Project>
+      <Name>Mnemonics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Security\Security.csproj">
+      <Project>{036f6162-4ac7-4399-9358-025e2043b09e}</Project>
+      <Name>Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14863</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14863/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

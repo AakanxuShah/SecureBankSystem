@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="UI.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="css/Custom.css" rel="stylesheet" />
+    <script src="Scripts/Custom/Master.js"></script>
+    
+    <title>SBS - The most Secure Banking System.</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    SBS</a>
+                <%--<img class="navbar-brand" src="images/logo.png" />--%>
+                <ul class="nav navbar-nav menu">
+                    <li>
+                        <asp:LinkButton runat="server" ID="HomeLink" OnClick="HomeLink_Click"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;Home</asp:LinkButton>
+                    </li>
+                    <li class="dropdown" runat="server" id="TransactionMenu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>&nbsp;Transactions 
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a runat="server" id="InternalTransferLink" href="InternalTransfer.aspx">Internal Transfer</a></li>
+                            <li><a runat="server" id="ExternalTransferLink" href="ExternalTransfer.aspx">External Transfer</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a runat="server" id="MakePaymentLink" href="MakePayment.aspx">Request Payment</a></li>
+                            <li><a runat="server" id="DebitFormLink" href="DebitForm.aspx">Withdraw Money</a></li>
+                            <li><a runat="server" id="CreditFormLink" href="CreditForm.aspx">Deposit Money</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a runat="server" id="AccountStatementLink"  href="AccountStatement.aspx">Account Statement</a></li>
+                            <li><a runat="server" id="CreateAccountLink"  href="CreateAccount.aspx">Request New Account</a></li>
+                            <li><a runat="server" id="DeleteCustomerLink"  href="DeleteCustomer.aspx">Delete Customer</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown" runat="server" id="AdminDropDown" visible="false">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-sort" aria-hidden="true"></span>&nbsp;Transactions 
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a runat="server" id="EmployeeCreateLink" href="EmployeeCreate.aspx">Create New Employee</a></li>
+                            <li><a runat="server" id="DeleteEmployeeLink" href="DeleteEmployee.aspx">Delete Employee</a></li>
+                            <li><a runat="server" id="AdminHomeLink" href="AdminHome.aspx">Pending Transactions</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a runat="server" id="PIILink" href="PII.aspx">PII</a></li>
+                            <li><a runat="server" id="SystemLogLink" href="SystemLog.aspx">System Log</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="About.aspx" ><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;About</a>
+                    </li>
+                    <li>
+                        <a href="Help.aspx"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;Help</a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="UserNameLabel" runat="server">User name</span> 
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><asp:LinkButton ID="ProfileUpdateLink" runat="server" Text="My Profile" OnClick="ProfileUpdateLink_Click"></asp:LinkButton> </li>
+                            <%--<li><a href="#">Settings</a></li>--%>
+                            <li role="separator" class="divider"></li>
+                            <li><asp:LinkButton runat="server" ID="SignOutLink" OnClick="SignOutLink_Click">Signout</asp:LinkButton></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="messagecontent" style="height: 20px; padding: 10px; align-content: center; width: 1170px; display: block; margin-left: auto; margin-right: auto; margin-top:50px; margin-bottom:0px">
+            <asp:Label ID="messageLabel" runat="server" Text="Message"></asp:Label>
+        </div>
+        <div class="maincontent">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div>
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <asp:Timer ID="messageTimer" Interval="4000" runat="server" OnTick="messageTimer_Tick"></asp:Timer>
+        </div>
+    </form>
+</body>
+</html>
